@@ -31,7 +31,44 @@ This project is a Student Teacher Appointment Booking system. It includes functi
 - npm install
 * ### Set Up the MySQL database
 * Create a new database named student_teacher
+* Create necessary tables in MySQL
+```
+create database student_teacher;
+use student_teacher;
 
+create table teachers (
+    id int auto_increment primary key,
+    name varchar(100) not null,
+    subject varchar(100) not null,
+    department varchar(100) not null
+);
+
+create table appointments (
+    id int auto_increment primary key,
+    teacher_id int not null,
+    student_id int not null,
+    date date not null,
+    time time not null,
+    status enum('pending', 'approved', 'canceled') default 'pending',
+    foreign key (teacher_id) references teachers(id),
+    foreign key (student_id) references students(id)
+);
+
+create table messages (
+    id int auto_increment primary key,
+    sender_id int not null,
+    receiver_id int not null,
+    message text not null,
+    created_at timestamp default current_timestamp
+);
+
+create table students (
+    id int auto_increment primary key,
+    name varchar(100) not null,
+    email varchar(100) unique not null,
+    password varchar(100) not null
+);
+```
 * ### Configure the database connection
 * update the database configuration in db.js with your MySQL credentials.
 * ### Start the Server
