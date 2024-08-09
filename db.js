@@ -4,7 +4,7 @@ const mysql = require('mysql2'); // importing mysql2 library
 const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'JHYD@1204!$jhyd',
+    password: 'your_password',
     database: 'student_teacher'
 });
 // eastablishing connection to database
