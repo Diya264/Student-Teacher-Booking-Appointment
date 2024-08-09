@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel = "Stylesheet" href = "../admin_style.css">
+</head>
+<body>
+    <!--sidebar navigation-->
+    <div class="sidebar">
+        <ul>
+            <!--link to manage teachers-->
+            <li><a href="#" id="teachersLink">Teachers</a></li>
+            <!--link to manage students-->
+            <li><a href="#" id="studentsLink">Students</a></li>
+            <!--logout button-->
+            <a id = "logout-btn" href = "../index.html">Logout</a>
+        </ul>
+    </div>
+    <!--main content area-->
+    <div class="main-content">
+
+        <h2 id ="mainTitle">Admin Dashboard</h2>
+        <!--section for managing teachers-->
+        <div id="teachersSection" class="section">
+            <h2>Manage Teachers</h2>
+            <!--form for adding teachers-->
+            <form id="addTeacherForm">
+                <label for="teacherId">ID (for update only):</label>
+                <input type="text" id="teacherId" name="id">
+                <label for="teacherName">Name:</label>
+                <input type="text" id="teacherName" name="name" required>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+                <label for="department">Department:</label>
+                <input type="text" id="department" name="department" required>
+                <button type="submit">Add Teacher</button>
+            </form>
+            <h3>Update/Delete Teacher</h3>
+            <ul id="teacherList"></ul> <!--list to display the list of teachers and also for updating or deleting a teacher-->
+        </div>
+
+        <!--section for approving students-->
+        <div id="studentsSection" class="section">
+            <h2>Approve Students</h2>
+            <ul id="studentList"></ul> <!--list of students to approve or reject-->
+        </div>
+    </div>
+    <script src="/admin_script.js"></script> 
+</body>
+</html>

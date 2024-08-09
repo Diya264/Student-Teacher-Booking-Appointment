@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="../student_style.css">
+</head>
+<body>
+    <h1>Welcome to the Student Dashboard</h1>
+
+    <h2>Search for Teachers</h2>
+
+    <!--form for searching teachers by name or subject-->
+    <form id="searchForm">
+        <!--label and input for search-->
+        <label for="searchInput">Teacher Name or Subject:</label>
+        <input type="text" id="searchInput" required>
+        <button id = "search-button" type="submit">Search</button>
+    </form>
+    <div id="teachersList">
+        <!--container to display the list of teachers-->
+    </div>
+
+    <h2>Book an Appointment</h2>
+    <!--form for booking an appointment with a teacher-->
+    <form id="bookAppointmentForm">
+        <!--label and input for teacher ID-->
+        <label for="teacherIdInput">Teacher ID:</label>
+        <input type="text" id="teacherIdInput" required><br>
+
+        <!--label and input for appointment date-->
+        <label for="dateInput">Date:</label>
+        <input type="date" id="dateInput" required><br>
+
+        <!--label and input for appointment time-->
+        <label for="timeInput">Time:</label>
+        <input type="time" id="timeInput" required><br>
+
+        <button type="submit">Book Appointment</button>
+    </form>
+
+    <h2>Send a Message</h2>
+    <!--form for sending a message to a teacher-->
+    <form id="sendMessageForm">
+        <!--label and input for teacher ID-->
+        <label id="receiver-id" for="teacherIdMessageInput">Teacher ID:</label>
+        <input type="text" id="teacherIdMessageInput" required><br>
+
+        <!--label and textarea for message-->
+        <label for="messageInput">Message:</label>
+        <textarea id="messageInput" required></textarea><br>
+
+        <button id = "send-message-button" type="submit">Send Message</button>
+    </form>
+    
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script> <!--javascript library for handling cookies-->
+    <script src="/student_script.js"></script>
+
+    <a href="../index.html">Logout</a> <!--logout link-->
+</body>
+</html>

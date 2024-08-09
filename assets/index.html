@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+    <!--preconnect to google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
+
+      <base href="http://localhost:3000/"> <!--setting the base URL for all the URL's in the document-->
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Select Your Account Below</h2> <!--container for the login-->
+
+    <div class="login-options">
+        <!--admin login option-->
+        <div class="login-option" onclick="selectRole('admin')">
+            <img src="Images/admin.jpg" alt="Admin"> <!--image of admin option-->
+            <p>Admin</p> <!--label of admin-->
+        </div>
+        <!--teacher login option-->
+        <div class="login-option" onclick="selectRole('teacher')">
+            <img src="Images/teacher.jpg" alt="Teacher"> <!--image of teacher option-->
+            <p>Teacher</p> <!--label for teacher option-->
+        </div>
+        <!--student login option-->
+        <div class="login-option" onclick="selectRole('student')">
+            <img src="Images/student.jpg" alt="Student"> <!--image of student option-->
+            <p>Student</p> <!--label for student option-->
+        </div>
+    </div>
+
+    <!--login form that becomes active after selectig a role-->
+    <form id="login-form" action="/login" method="post" class="active">
+        <input type="hidden" id="user-type" name="user-type"> <!--hidden input to store selected user type-->
+        <input type="text" id="username" name="username" placeholder="Enter your Username" required>
+        <input type="password" id="password" name="password" placeholder="Enter Password" required>
+        <button type="submit">Login</button>
+        <p class="register-link">Don't have an account? <a href="/registration">Register here</a></p>
+    </form>
+</div>
+
+<script>
+    // function to handle role selection
+    function selectRole(role) {
+        // setting the value of hidden input field to selected role
+        document.getElementById("user-type").value = role;
+        // setting/making the borders of all login options transparent
+        document.querySelectorAll(".login-option").forEach(option => {
+            option.style.border = '2px solid transparent';
+        });
+        // adding a border to selected login option
+        document.querySelector(`.login-option img[src="Images/${role}.jpg"]`).parentNode.style.border = '2px solid #65468c';
+        document.getElementById("login-form").classList.add("active");
+    }
+
+    // for form submission 
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+        const role = document.getElementById("user-type").value; // getting the value of hidden input field
+        if (!role) { // show/pop an alert if no role is selected
+            event.preventDefault();
+            alert("Please select a role.");
+        }
+    });
+</script>
+</body>
+</html>

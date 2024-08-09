@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+    background: rgb(45,56,138);
+    background: linear-gradient(220deg, rgba(45,56,138,1) 0%, rgba(37,128,230,1) 50%, rgba(0,174,239,1) 100%);
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+    color: white;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+/* styling for form */
+form {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #56575c;
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="time"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button[type="submit"] {
+    display: inline-block;
+    background: white;
+    color: #2580e6;
+    padding: 10px;
+    border-color: #2580e6;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+form button[type="submit"]:hover {
+    color: #422e5c;
+    border-color: #422e5c;
+}
+
+/* styling for teachers list */
+#teachersList {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#teachersList ul {
+    list-style: none;
+}
+
+#teachersList li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#teachersList li:last-child {
+    border-bottom: none;
+}
+
+/* styling for logout link */
+a {
+    display: inline-block;
+    position:absolute;
+    background: transparent;
+    top:0;
+    right: 20px;
+    margin: 0;
+    font-size: 24px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a:hover {
+    color: #dddddd;
+}
+

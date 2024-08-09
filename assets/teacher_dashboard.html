@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="../teacher_style.css">
+</head>
+<body>
+    <a href = "../index.html">Logout</a> <!--logout link-->
+    <h1>Welcome to the Teacher Dashboard</h1>
+    <h2>Schedule New Appointment</h2>
+    <!--hidden input to store teacher's ID-->
+    <input type="hidden" id="teacherIdInput" value="201">
+   
+    <!--form for scheduling a new appointment-->
+    <form id="scheduleForm">
+        <!--label and input for student ID-->
+        <label for="studentIdInput">Student ID:</label>
+        <input type="text" id="studentIdInput" required><br>
+        <!--label and input for appointment date-->
+        <label for="dateInput">Date:</label>
+        <input type="date" id="dateInput" required><br>
+        <!--label and input for appointment time-->
+        <label for="timeInput">Time:</label>
+        <input type="time" id="timeInput" required><br>
+
+        <button type="submit">Schedule Appointment</button>
+    </form>
+    
+    <h2>Appointments</h2>
+    <div id="appointmentsList">
+        <!--container to display the list of appointments-->
+    </div>
+
+    <h2>Messages</h2>
+    <div id="messagesList">
+       <!--container to display the list of messages-->
+    </div>
+
+    <script src = "/teacher_script.js">
+    </script>
+</body>
+</html>

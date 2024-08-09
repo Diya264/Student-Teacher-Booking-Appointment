@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    margin-top:0;
+    background: rgb(173,83,137);
+    background: linear-gradient(90deg, rgba(173,83,137,1) 10%, rgba(60,16,83,1) 100%);
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #2E1437;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    font-size: 3vw;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+    flex: 1;
+}
+
+.section {
+    display: none;
+}
+
+.section.active {
+    display: block;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: none; 
+    outline: none;
+    background: transparent;
+    border-bottom: 2px solid #c7c1c2;
+    border-radius: 4px;
+}
+
+input::placeholder {
+    color:#fff;
+}
+
+button {
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    margin-top: 15px;
+    background-color: #2C3E50;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    border-color: #ADA996;
+
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+li button {
+    margin-left: 10px;
+    background-color: #2C3E50;
+}
+
+li button:hover {
+    border-color: #ADA996;
+}
+
+#logout-btn {
+    height: 24px;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    position:absolute;
+    bottom: 80px;
+}
+
+#logout-btn:hover {
+    border-color: #ADA996;
+}

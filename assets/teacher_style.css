@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
+    background: rgb(203,53,107);
+    background: linear-gradient(90deg, rgba(203,53,107,1) 0%, rgba(189,63,50,1) 100%);
+}
+
+h1, h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #56575c;
+
+}
+
+form input[type="text"],
+form input[type="date"],
+form input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+form button[type="submit"] {
+    margin-top: 12px;
+    display: inline-block;
+    background: white;
+    color: #f7893c;
+    padding: 10px;
+    border-color: #f7893c;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+form button[type="submit"]:hover {
+    color: #ef4136;
+    border-color: #ef4136;
+}
+
+/* appointments and messages lists */
+#appointmentsList, #messagesList {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#appointmentsList ul, #messagesList ul {
+    list-style: none;
+}
+
+#appointmentsList li, #messagesList li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#appointmentsList li:last-child, #messagesList li:last-child {
+    border-bottom: none;
+}
+
+/* appointment buttons */
+#appointmentsList button {
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a {
+    display: inline-block;
+    position:absolute;
+    background: transparent;
+    top:0;
+    right: 20px;
+    margin: 0;
+    font-size: 24px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a:hover {
+    color: #23272b;
+}
